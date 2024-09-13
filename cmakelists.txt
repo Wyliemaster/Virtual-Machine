@@ -1,0 +1,23 @@
+# Specify the minimum version of CMake required
+cmake_minimum_required(VERSION 3.10)
+
+# Set the project name
+project(JamVM)
+
+# Set the C++ standard
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
+
+# Specify the directories for the headers
+include_directories(${CMAKE_SOURCE_DIR}/headers ${CMAKE_BINARY_DIR})
+
+# Automatically include all source files in src/
+file(GLOB SOURCES "src/*.cpp")
+
+# Set the key value
+set(KEY "my-secret-key-value")
+
+# Configure the header file with the key value
+
+# Define the executable target
+add_executable(JamVM ${SOURCES})
